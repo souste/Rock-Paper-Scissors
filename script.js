@@ -1,5 +1,3 @@
-console.log("Hey there!");
-
 const choice = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice() {
@@ -23,16 +21,23 @@ function playRound(playerSelection, computerSelection) {
     (finalCase === "Scissors" && computerSelection === "Paper")
   ) {
     return `You win! ${finalCase} beats ${computerSelection}`;
-  } else if (
-    (finalCase === "Rock" && computerSelection === "Rock") ||
-    (finalCase === "Paper" && computerSelection === "Paper") ||
-    (finalCase === "Scissors" && computerSelection === "Scissors")
-  ) {
+  } else if (finalCase === computerSelection) {
     return `You draw!`;
+  } else {
+    return `Please enter Rock, Paper or Scissors`;
   }
 }
 
-const playerSelection = "PaPeR";
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
+let score = 0;
+let compScore = 0;
+
+function game() {
+  for (let i = 1; i <= 5; i++) {
+    let playerSelection = prompt("Go!", "");
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}
+
+game();
