@@ -36,26 +36,18 @@ function playRound(playerSelection, computerSelection) {
     return `Please enter Rock, Paper or Scissors`;
   }
 }
-let playerSelection = prompt("Go!", "");
-const computerSelection = getComputerChoice();
-
-console.log(playRound(playerSelection, computerSelection));
 
 function game() {
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i <= 5; i++) {
     let playerSelection = prompt("Go!", "");
+    let computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
   }
   if (playerScore > compScore) {
-    console.log("Well done, you win");
+    console.log("WELL DONE, YOU WIN THE GAME!!");
   } else if (compScore > playerScore) {
-    console.log("Bad luck, you lose");
+    console.log("BAD LUCK, COMPUTER WINS THE GAME");
   }
 }
 
 game();
-
-// CURRENT ISSUES - EVERYTHING WORKS BEFORE THE FINAL PART OF THE PROBLEM
-// Computer selection remains the same over 5 turns - this is the final problem, everything works when I solve this!
-
-// CAN TRY USING A DEBUGGER
