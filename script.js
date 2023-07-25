@@ -19,7 +19,7 @@ function playRound(playerSelection, computerSelection) {
   ) {
     playerScore += -1;
     compScore += 1;
-    return `You lose! ${computerSelection} beats ${finalCase}. playerScore is ${playerScore}. compScore is ${compScore}`;
+    return `You lose! ${computerSelection} beats ${finalCase}.`;
   } else if (
     (finalCase === "Rock" && computerSelection === "Scissors") ||
     (finalCase === "Paper" && computerSelection === "Rock") ||
@@ -27,10 +27,13 @@ function playRound(playerSelection, computerSelection) {
   ) {
     playerScore += 1;
     compScore += -1;
-    return `You win! ${finalCase} beats ${computerSelection}. playerScore is ${playerScore}. compScore is ${compScore}`;
+    return `You win! ${finalCase} beats ${computerSelection}. `;
   } else if (finalCase === computerSelection) {
-    return `You draw! playerScore is ${playerScore}. compScore is ${compScore}`;
+    playerScore += 0;
+    compScore += 0;
+    return `You draw!`;
   } else {
+    // can remove this bit when buttons are created
     playerScore += 0;
     compScore += 0;
     return `Please enter Rock, Paper or Scissors`;
