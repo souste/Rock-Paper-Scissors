@@ -5,8 +5,11 @@ function getComputerChoice() {
   return answer;
 }
 
-let playerScore = 0;
-let compScore = 0;
+let playerScore = document.querySelector(".player-score");
+let compScore = document.querySelector(".comp-score");
+
+let playerCount = 0;
+let compCount = 0;
 
 function playRound(playerSelection, computerSelection) {
   if (
@@ -14,20 +17,26 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Paper" && computerSelection === "Scissors") ||
     (playerSelection === "Scissors" && computerSelection === "Rock")
   ) {
-    playerScore += -1;
-    compScore += 1;
+    playerCount += 0;
+    compCount += 1;
+    playerScore.innerText = playerCount;
+    compScore.innerText = compCount;
     return (result.innerText = `You lose! ${computerSelection} beats ${playerSelection}.`);
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
     (playerSelection === "Paper" && computerSelection === "Rock") ||
     (playerSelection === "Scissors" && computerSelection === "Paper")
   ) {
-    playerScore += 1;
-    compScore += -1;
+    playerCount += 1;
+    compCount += 0;
+    playerScore.innerText = playerCount;
+    compScore.innerText = compCount;
     return (result.innerText = `You win! ${playerSelection} beats ${computerSelection}. `);
   } else if (playerSelection === computerSelection) {
-    playerScore += 0;
-    compScore += 0;
+    playerCount += 0;
+    compCount += 0;
+    playerScore.innerText = playerCount;
+    compScore.innerText = compCount;
     return (result.innerText = `You draw!`);
   }
 }
@@ -43,7 +52,6 @@ buttons.forEach((button) => {
 });
 
 const result = document.querySelector(".result");
-const score = document.querySelector(".score");
 
 // function game() {
 //   for (let i = 1; i <= 5; i++) {
