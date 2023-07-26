@@ -48,10 +48,16 @@ buttons.forEach((button) => {
     let computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection, computerSelection));
+    if (playerCount === 5) {
+      return (winner.innerText = "Well done, you are the winner!");
+    } else if (compCount === 5) {
+      return (winner.innerText = "Sorry you lose");
+    }
   });
 });
 
 const result = document.querySelector(".result");
+const winner = document.querySelector(".winner");
 
 // function game() {
 //   for (let i = 1; i <= 5; i++) {
