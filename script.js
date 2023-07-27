@@ -7,6 +7,8 @@ function getComputerChoice() {
 
 let playerScore = document.querySelector(".player-score");
 let compScore = document.querySelector(".comp-score");
+const result = document.querySelector(".result");
+const winner = document.querySelector(".winner");
 
 let playerCount = 0;
 let compCount = 0;
@@ -46,30 +48,26 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     let playerSelection = button.id;
     let computerSelection = getComputerChoice();
-
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection);
     if (playerCount === 5) {
-      return (winner.innerText = "Well done, you are the winner!");
+      alert((winner.innerText = "Well done, you are the winner!"));
+      restart();
     } else if (compCount === 5) {
-      return (winner.innerText = "Sorry you lose");
+      alert((winner.innerText = "Sorry you lose"));
+      restart();
     }
   });
 });
 
-const result = document.querySelector(".result");
-const winner = document.querySelector(".winner");
+function restart() {
+  playerCount = 0;
+  compCount = 0;
+  playerScore.innerText = playerCount;
+  compScore.innerText = compCount;
+  result.innerText = "";
+  winner.innerText = "";
+}
 
-// function game() {
-//   for (let i = 1; i <= 5; i++) {
-//     let playerSelection = prompt("Go!", "");
-//     let computerSelection = getComputerChoice();
-//     console.log(playRound(playerSelection, computerSelection));
-//   }
-//   if (playerScore > compScore) {
-//     console.log("WELL DONE, YOU WIN THE GAME!!");
-//   } else if (compScore > playerScore) {
-//     console.log("BAD LUCK, COMPUTER WINS THE GAME");
-//   }
-// }
-
-// game();
+// SHould the winner message make everything else disappear??
+// Need a reset button!
+// Can probably remove the code from the buttons reset bit and apply it to a reset button
