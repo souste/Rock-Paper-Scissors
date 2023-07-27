@@ -1,3 +1,8 @@
+/* Hover?
+Any other effects? */
+
+/* rock - <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Icongeek26 - Flaticon</a> */
+
 .result {
   display: flex;
   justify-content: center;
@@ -7,7 +12,7 @@
 
 .score-box {
   display: flex;
-  border: 2px solid red;
+
   justify-content: center;
 }
 
@@ -38,6 +43,11 @@
 
 .button {
   margin: 10px;
+}
+
+.image {
+  height: 100px;
+  width: 100px;
 }
 
 /* Modal, need to sort */
