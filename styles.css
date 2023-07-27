@@ -1,0 +1,56 @@
+.result {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.score-box {
+  display: flex;
+  border: 2px solid red;
+  justify-content: center;
+}
+
+.ind-score-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 30px;
+  width: 200px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.score-text {
+  font-size: 30px;
+}
+
+.player-score,
+.comp-score {
+  font-size: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.button {
+  margin: 10px;
+}
+
+/* Modal, need to sort */
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-result {
+  border: 2px solid black;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  background-color: pink;
+}
