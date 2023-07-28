@@ -99,4 +99,6 @@ function restart() {
   result.innerText = "ROCK PAPER SCISSORS: FIRST TO 5 WINS";
   modalContent.innerText = "";
   modal.style.display = "none";
+  document.getElementById("player-choice").src = "./images/Start.PNG";
+  document.getElementById("computer-choice").src = "./images/Start2.PNG";
 }
