@@ -62,6 +62,14 @@ buttons.forEach((button) => {
     let playerSelection = button.id;
     let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
+    if (playerSelection === "Rock") {
+      document.getElementById("player-choice").src = "./images/RockChoice.PNG";
+    } else if (playerSelection === "Paper") {
+      document.getElementById("player-choice").src = "./images/paperChoice.png";
+    } else if (playerSelection === "Scissors") {
+      document.getElementById("player-choice").src =
+        "./images/scissorsChoice.png";
+    }
 
     gameWinner();
   });
