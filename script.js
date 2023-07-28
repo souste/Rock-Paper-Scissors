@@ -1,8 +1,15 @@
-const choice = ["Rock", "Paper", "Scissors"];
-
 function getComputerChoice() {
-  const answer = choice[Math.floor(Math.random() * choice.length)];
-  return answer;
+  const choice = ["Rock", "Paper", "Scissors"];
+  const compChoice = choice[Math.floor(Math.random() * choice.length)];
+  if (compChoice === "Rock") {
+    document.getElementById("computer-choice").src = "./images/RockChoice.PNG";
+  } else if (compChoice === "Paper") {
+    document.getElementById("computer-choice").src = "./images/paperChoice.png";
+  } else if (compChoice === "Scissors") {
+    document.getElementById("computer-choice").src =
+      "./images/scissorsChoice.png";
+  }
+  return compChoice;
 }
 
 let playerCount = 0;
@@ -45,6 +52,7 @@ let winner = document.querySelector(".winner");
 let modal = document.querySelector(".modal-result");
 let modalContent = document.querySelector(".modal-content");
 let resetButton = document.querySelector(".reset-btn");
+let playerChoice = document.querySelector(".player-choice");
 
 modal.style.display = "none";
 
@@ -54,9 +62,12 @@ buttons.forEach((button) => {
     let playerSelection = button.id;
     let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
+
     gameWinner();
   });
 });
+
+function playerSelectImage() {}
 
 function gameWinner() {
   if (playerCount >= 5) {
