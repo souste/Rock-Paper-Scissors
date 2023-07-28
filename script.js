@@ -25,6 +25,8 @@ function playRound(playerSelection, computerSelection) {
     compCount += 1;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
+    playerScoreBox.setAttribute("style", "background: red");
+    compScoreBox.setAttribute("style", "background: green");
     return (result.innerText = `You lose! ${computerSelection} beats ${playerSelection}.`);
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
@@ -35,12 +37,16 @@ function playRound(playerSelection, computerSelection) {
     compCount += 0;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
+    playerScoreBox.setAttribute("style", "background: green");
+    compScoreBox.setAttribute("style", "background: red");
     return (result.innerText = `You win! ${playerSelection} beats ${computerSelection}. `);
   } else if (playerSelection === computerSelection) {
     playerCount += 0;
     compCount += 0;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
+    playerScoreBox.setAttribute("style", "background: grey");
+    compScoreBox.setAttribute("style", "background: grey");
     return (result.innerText = `You draw!`);
   }
 }
@@ -53,6 +59,8 @@ let modal = document.querySelector(".modal-result");
 let modalContent = document.querySelector(".modal-content");
 let resetButton = document.querySelector(".reset-btn");
 let playerChoice = document.querySelector(".player-choice");
+let playerScoreBox = document.querySelector(".player-score-box");
+let compScoreBox = document.querySelector(".comp-score-box");
 
 modal.style.display = "none";
 
@@ -80,9 +88,11 @@ function playerSelectImage() {}
 function gameWinner() {
   if (playerCount >= 5) {
     modal.style.display = "block";
+    document.getElementById("result-image").src = "./images/RockWinner.PNG";
     modalContent.innerText = "Well done, you are the winner!";
   } else if (compCount >= 5) {
     modal.style.display = "block";
+    document.getElementById("result-image").src = "./images/RockLoser.PNG";
     modalContent.innerText = "Sorry you lose";
   }
 }
@@ -101,4 +111,6 @@ function restart() {
   modal.style.display = "none";
   document.getElementById("player-choice").src = "./images/Start.PNG";
   document.getElementById("computer-choice").src = "./images/Start2.PNG";
+  playerScoreBox.setAttribute("style", "background: grey");
+  compScoreBox.setAttribute("style", "background: grey");
 }

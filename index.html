@@ -12,29 +12,37 @@
     <h3 class="result">ROCK PAPER SCISSORS: FIRST TO 5 WINS</h3></div>
  
       <div class="score-box">
-        <div class="ind-score-box">
-        <p class="score-text">Player Score:</p>
+        <div class="player-score-box">
+        <p class="score-text">PLAYER</p>
+        <div class="image-container">
         <img class="image" id="player-choice" src="./images/Start.PNG">
+      </div>
         <h4 class="player-score">0</h4>
       </div>
-      <div class="ind-score-box">
-        <p class="score-text">Comp Score:</p>
+      <div class="comp-score-box">
+        <p class="score-text">COMPUTER</p>
+        <div class="image-container">
        <img class="image" id="computer-choice" src="./images/Start2.PNG">
+      </div>
         <h4 class="comp-score">0</h4>
       </div>
         <div><h3 class="winner"></h3></div>
+      </div>
+      <div class="modal-container">
+        <div class="modal-result">
+          
+          <img class="image" id="result-image" src="./images/Start.PNG">
+      
+          <p class="modal-content"></p>
+          <button class="reset-btn">Play Again</button>
+        </div>
       </div>
       <div class="button-container">
       <button class="button" id="Rock"><img  class="image" id="rock-image" src="./images/rock.png"></button>
         <button class="button" id="Paper"> <img  class="image" id="paper-image" src="./images/paper.png"></button>
         <button class="button" id="Scissors"><img  class="image" id="scissors-image" src="./images/scissors.png"></button>
       </div>
-      <div class="modal-container">
-          <div class="modal-result">
-            <button class="reset-btn">Play Again</button>
-            <p class="modal-content"></p>
-          </div>
-        </div>
+   
     </div>
   </div>
   </body>
