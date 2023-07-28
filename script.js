@@ -25,10 +25,10 @@ function playRound(playerSelection, computerSelection) {
     compCount += 1;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
-    playerScoreBox.setAttribute("style", "background: red");
+    playerScoreBox.setAttribute("style", "background: rgb(196, 91, 91)");
     compScoreBox.setAttribute(
       "style",
-      "background: green; transform: scale(1.2)"
+      "background: rgb(98, 182, 112);; transform: scale(1.2)"
     );
     return (result.innerText = `You lose! ${computerSelection} beats ${playerSelection}.`);
   } else if (
@@ -42,9 +42,9 @@ function playRound(playerSelection, computerSelection) {
     compScore.innerText = compCount;
     playerScoreBox.setAttribute(
       "style",
-      "background: green; transform: scale(1.2)"
+      "background: rgb(98, 182, 112);; transform: scale(1.2)"
     );
-    compScoreBox.setAttribute("style", "background: red");
+    compScoreBox.setAttribute("style", "background: rgb(196, 91, 91");
     return (result.innerText = `You win! ${playerSelection} beats ${computerSelection}. `);
   } else if (playerSelection === computerSelection) {
     playerCount += 0;
