@@ -26,7 +26,10 @@ function playRound(playerSelection, computerSelection) {
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
     playerScoreBox.setAttribute("style", "background: red");
-    compScoreBox.setAttribute("style", "background: green");
+    compScoreBox.setAttribute(
+      "style",
+      "background: green; transform: scale(1.2)"
+    );
     return (result.innerText = `You lose! ${computerSelection} beats ${playerSelection}.`);
   } else if (
     (playerSelection === "Rock" && computerSelection === "Scissors") ||
@@ -37,7 +40,10 @@ function playRound(playerSelection, computerSelection) {
     compCount += 0;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
-    playerScoreBox.setAttribute("style", "background: green");
+    playerScoreBox.setAttribute(
+      "style",
+      "background: green; transform: scale(1.2)"
+    );
     compScoreBox.setAttribute("style", "background: red");
     return (result.innerText = `You win! ${playerSelection} beats ${computerSelection}. `);
   } else if (playerSelection === computerSelection) {
@@ -45,8 +51,8 @@ function playRound(playerSelection, computerSelection) {
     compCount += 0;
     playerScore.innerText = playerCount;
     compScore.innerText = compCount;
-    playerScoreBox.setAttribute("style", "background: grey");
-    compScoreBox.setAttribute("style", "background: grey");
+    playerScoreBox.setAttribute("style", "background: lightgrey");
+    compScoreBox.setAttribute("style", "background: lightgrey");
     return (result.innerText = `You draw!`);
   }
 }
@@ -111,6 +117,6 @@ function restart() {
   modal.style.display = "none";
   document.getElementById("player-choice").src = "./images/Start.PNG";
   document.getElementById("computer-choice").src = "./images/Start2.PNG";
-  playerScoreBox.setAttribute("style", "background: grey");
-  compScoreBox.setAttribute("style", "background: grey");
+  playerScoreBox.setAttribute("style", "background: lightgrey");
+  compScoreBox.setAttribute("style", "background: lightgrey");
 }
