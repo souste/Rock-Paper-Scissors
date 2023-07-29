@@ -99,7 +99,7 @@ function gameWinner() {
   } else if (compCount >= 5) {
     modal.style.display = "block";
     document.getElementById("result-image").src = "./images/RockLoser.PNG";
-    modalContent.innerText = "Sorry you lose";
+    modalContent.innerText = "Sorry you lose...";
   }
 }
 
