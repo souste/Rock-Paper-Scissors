@@ -7,6 +7,7 @@ body {
   justify-content: center;
   font-size: 60px;
   margin-top: 50px;
+  font-family: Helvetica;
 }
 
 .score-box {
@@ -29,6 +30,7 @@ body {
 .score-text {
   font-size: 30px;
   font-weight: bold;
+  font-family: Helvetica;
 }
 
 .player-score,
@@ -36,6 +38,7 @@ body {
   font-size: 40px;
   margin: 5px;
   font-weight: bold;
+  font-family: Helvetica;
 }
 
 .button-container {
@@ -102,4 +105,6 @@ body {
 
 .modal-content {
   font-size: 30px;
+  font-weight: bold;
+  font-family: Helvetica;
 }
