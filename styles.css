@@ -7,7 +7,7 @@ body {
   justify-content: center;
   font-size: 60px;
   margin-top: 50px;
-  font-family: Helvetica;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .score-box {
@@ -19,7 +19,6 @@ body {
 .comp-score-box {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   margin: 30px;
   width: 300px;
   text-align: center;
@@ -30,7 +29,7 @@ body {
 .score-text {
   font-size: 30px;
   font-weight: bold;
-  font-family: Helvetica;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .player-score,
@@ -38,7 +37,7 @@ body {
   font-size: 40px;
   margin: 5px;
   font-weight: bold;
-  font-family: Helvetica;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .button-container {
@@ -50,6 +49,7 @@ body {
 .button {
   margin: 30px;
   border-radius: 50%;
+  box-shadow: 0 0 0 2px black;
 }
 
 .button:hover {
@@ -69,7 +69,6 @@ body {
 #computer-choice {
   border-radius: 20%;
 }
-/* Modal, need to sort */
 
 .modal-container {
   display: flex;
@@ -77,14 +76,13 @@ body {
 }
 
 .modal-result {
-  border: 2px solid black;
   border-radius: 20px;
   margin: 20px;
   padding: 20px;
   width: 600px;
   height: 300px;
   text-align: center;
-  background-color: lightgray;
+  background: linear-gradient(45deg, #fcbf1e, #d42027);
   position: absolute;
   z-index: 2;
 }
@@ -106,5 +104,5 @@ body {
 .modal-content {
   font-size: 30px;
   font-weight: bold;
-  font-family: Helvetica;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
